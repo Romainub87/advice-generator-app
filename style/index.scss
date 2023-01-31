@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+$Neon_Green: hsl(150, 100%, 66%);
+$Grayish_Blue: hsl(217, 19%, 38%);
+$Dark_Grayish_Blue: hsl(217, 19%, 24%);
+$Dark_Blue: hsl(218, 23%, 16%);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Manrope;
+    background-color: $Dark_Blue;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        width: 25vw;
+        padding: 50px;
+        background-color: $Dark_Grayish_Blue;
+        border-radius: 20px;
+
+        .id {
+            color: $Neon_Green;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 4.72px;
+
+            #idAdvice {
+                letter-spacing: 2px;
+            }
+        }
+
+        .comment {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .separation {
+            display: flex;
+            margin-bottom: 2%;
+        }
+
+        .diceback {
+            display: flex;
+            position: absolute;
+            bottom: -25px;
+            background-color: $Neon_Green;
+            padding: 14px;
+            border-radius: 100%;
+
+            &:hover {
+                box-shadow: 0px 0px 20px 10px rgba($color: $Neon_Green, $alpha: 0.3);
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
