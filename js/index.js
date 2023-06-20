@@ -3,6 +3,14 @@ var advice = document.getElementById("advice");
 var dice = document.getElementById("dice");
 var idAdvice = document.getElementById("idAdvice");
 
+// onInit generer un conseil
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => {
+    idAdvice.innerText = data.slip.id;
+    advice.innerText = '" ' + data.slip.advice + ' "';
+  });
+
 dice.addEventListener("click", function () {
   fetch(url)
     .then((response) => response.json())
